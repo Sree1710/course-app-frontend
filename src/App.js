@@ -7,6 +7,7 @@ import AdminLogin from './Components/AdminLogin';
 import StudReg from './Components/StudReg';
 import StudLogin from './Components/StudLogin';
 import StudProfile from './Components/StudProfile';
+import ClgLogin from './Components/ClgLogin';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route path='/studreg' exact element={<StudReg/>}/>
       <Route path='/studlogin' exact element={<StudLogin/>}/>
       <Route path='/studprofile' exact element={<StudProfile/>}/>
+      <Route path='/clglogin' exact element={<ClgLogin/>}/>
      </Routes>
      </BrowserRouter>
     </div>
