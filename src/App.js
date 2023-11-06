@@ -1,11 +1,12 @@
 import AdminAddClg from './AdminAddClg';
 import AdminViewClg from './AdminViewClg';
+import AdminViewStudent from './AdminViewStudent';
 import './App.css';
 
 function App() {
   return (
     <div>
-     <AdminViewClg/>
+     <AdminViewStudent/>
     </div>
   );
 }
