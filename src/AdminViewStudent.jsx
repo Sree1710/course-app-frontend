@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import AdminNavBar from './AdminNavBar'
 
 const AdminViewStudent = () => {
     const [inputField, setInputField] = useState(
@@ -36,6 +37,7 @@ const AdminViewStudent = () => {
             (Response) => {
                 setOutputField(Response.data)
                 console.log(Response.data)
+                setIsLoading(false)
                 setInputField({ clgName: "" })
             }
         )
@@ -44,6 +46,7 @@ const AdminViewStudent = () => {
     useEffect(() => { getData() }, [])
     return (
         <div>
+            <AdminNavBar />
             <div className="container">
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -68,7 +71,7 @@ const AdminViewStudent = () => {
                             </div>
                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"></div>
                         </div>
-                        <div className="row g-3">
+                        {isLoading ? <p>Select College Name !!!</p> : <div className="row g-3">
                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                 <table className="table">
                                     <thead>
@@ -98,7 +101,7 @@ const AdminViewStudent = () => {
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
+                        </div>}
                     </div>
                 </div>
             </div>
