@@ -1,10 +1,11 @@
 import AdminAddClg from './AdminAddClg';
+import AdminViewClg from './AdminViewClg';
 import './App.css';
 
 function App() {
   return (
     <div>
-     <AdminAddClg/>
+     <AdminViewClg/>
     </div>
   );
 }
