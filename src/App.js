@@ -8,6 +8,7 @@ import StudReg from './Components/StudReg';
 import StudLogin from './Components/StudLogin';
 import StudProfile from './Components/StudProfile';
 import ClgLogin from './Components/ClgLogin';
+import ClgViewStud from './Components/ClgViewStud';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route path='/studlogin' exact element={<StudLogin/>}/>
       <Route path='/studprofile' exact element={<StudProfile/>}/>
       <Route path='/clglogin' exact element={<ClgLogin/>}/>
+      <Route path='/clgviewstud' exact element={<ClgViewStud/>}/>
      </Routes>
      </BrowserRouter>
     </div>
