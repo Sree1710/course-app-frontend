@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import StudRegNav from './StudRegNav'
+import { useNavigate } from 'react-router-dom'
 
 const StudReg = () => {
     const [inputField,setInputField]=useState(
@@ -13,6 +14,7 @@ const StudReg = () => {
 
     const apiLink="http://localhost:3001/studreg"
     const apiLink2="http://localhost:3001/admviewclg"
+    const navigate=useNavigate()
 
     const inputHandler=(event)=>{
         setInputField({...inputField,[event.target.name]:event.target.value})
@@ -34,6 +36,7 @@ const StudReg = () => {
                 if (Response.data.status=="success") {
                     alert("Student Registered Successfully!!!")
                     setInputField({clgName:"",studName:"",studAdmNo:"",studCurrSem:"",studDept:"",studPhNo:"",studEmailId:"",studPass:"",confirmPass:""})
+                    navigate("/studlogin")
                 } else {
                     alert("Something Went Wrong !!!")
                 }
