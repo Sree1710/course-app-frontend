@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const ClgViewStud = () => {
     const [studData,setStudData]=useState(
@@ -17,6 +17,7 @@ const ClgViewStud = () => {
         )
     }
 
+    useEffect(()=>{getData()},[])
     return (
         <div>
             <div className="container">
