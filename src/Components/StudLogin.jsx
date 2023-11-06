@@ -5,7 +5,7 @@ import AppNavBar from './AppNavBar'
 
 const StudLogin = () => {
     const [inputField,setInputField]=useState(
-        {username:"",password:""}
+        {studEmailId:"",studPass:""}
     )
 
     const apiLink="http://localhost:3001/studlogin"
@@ -41,12 +41,12 @@ const StudLogin = () => {
                             <h1>Student Login</h1>
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <label htmlFor="" className="form-label">Username</label>
-                            <input onChange={inputHandler} type="text" className="form-control" name="username" value={inputField.username} />
+                            <label htmlFor="" className="form-label">Email ID</label>
+                            <input onChange={inputHandler} type="text" className="form-control" name="studEmailId" value={inputField.studEmailId} />
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <label htmlFor="" className="form label">Password</label>
-                            <input onChange={inputHandler} type="password" name="password" id="" className="form-control" value={inputField.password} />
+                            <input onChange={inputHandler} type="password" name="studPass" id="" className="form-control" value={inputField.studPass} />
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <button onClick={readValue} className="btn btn-primary">Sign In</button>
