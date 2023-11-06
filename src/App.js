@@ -5,6 +5,7 @@ import AdminViewStudent from './Components/AdminViewStudent';
 import './App.css';
 import AdminLogin from './Components/AdminLogin';
 import StudReg from './Components/StudReg';
+import StudLogin from './Components/StudLogin';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path='/admviewclg' exact element={<AdminViewClg/>}/>
       <Route path='/admviewstud' exact element={<AdminViewStudent/>}/>
       <Route path='/studreg' exact element={<StudReg/>}/>
+      <Route path='/studlogin' exact element={<StudLogin/>}/>
      </Routes>
      </BrowserRouter>
     </div>
