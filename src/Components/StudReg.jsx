@@ -65,7 +65,7 @@ const StudReg = () => {
                                 <option value="">SELECT</option>
                                 {outputField.map(
                                     (value,index)=>{
-                                        return <option value={value.clgName}>{value.clgName}</option>
+                                        return <option value={value._id}>{value.clgName}</option>
                                     }
                                 )}
                             </select>
